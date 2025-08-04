@@ -1,32 +1,19 @@
-class calculator {
-  public int add(int num1, int num2) {
-    return num1 + num2;
-  }
-
-  public int add(int num1, int num2, int num3) {
-    return num1 + num2 + num3;
-
-  }
-
-  public double add(double num1, int num2) {
-    return num1 + num2;
-  }
-}
-
 class hello {
   public static void main(String[] args) {
 
-    calculator calc = new calculator();
+    int num[][] = new int[3][4];
 
-    int result1 = calc.add(10, 20);
-    System.out.println(result1);
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 4; j++) {
+        num[i][j] = (int) (Math.random() * 10);
+      }
+    }
 
-    int result2 = calc.add(10, 20, 30);
-    System.out.println(result2);
-
-    double result3 = calc.add(10.5, 20);
-    System.out.println(result3);
-
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 4; j++) {
+        System.out.print(num[i][j] + " ");
+      }
+      System.out.println();
+    }
   }
-
 }
