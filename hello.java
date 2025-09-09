@@ -1,19 +1,38 @@
+class Human {
+  private int age;
+  private String Name;
+
+  public int getAge() {
+    return age;
+
+  }
+
+  public String getName() {
+    return Name;
+  }
+
+  public void setName(String a) {
+    Name = a;
+  }
+
+  public void setAge(int a) {
+    age = a;
+  }
+
+}
+
 class hello {
   public static void main(String[] args) {
 
-    int num[][] = new int[3][4];
+    Human obj = new Human();
 
-    for (int i = 0; i < 3; i++) {
-      for (int j = 0; j < 4; j++) {
-        num[i][j] = (int) (Math.random() * 10);
-      }
-    }
+    obj.setAge(12);
+    obj.setName("Alec");
 
-    for (int i = 0; i < 3; i++) {
-      for (int j = 0; j < 4; j++) {
-        System.out.print(num[i][j] + " ");
-      }
-      System.out.println();
-    }
+    String newName = obj.getName();
+    int newAge = obj.getAge();
+
+    System.out.println("The Name is " + newName + " And am " + newAge);
+
   }
 }
